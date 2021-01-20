@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import "twin.macro";
 import { useFilter } from "./filter-context";
 
@@ -20,28 +19,10 @@ const SearhIcon = (): JSX.Element => (
 
 const Searchbar = (): JSX.Element => {
   const { state, dispatch } = useFilter();
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    // 500ms timeout
-
-    const timer = setTimeout(() => {
-      if (inputRef && inputRef.current) {
-        if (state.searchValue && state.searchValue === inputRef.current.value) {
-          // Do async logic
-        }
-      }
-    }, 500);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [state.searchValue, inputRef]);
 
   return (
     <div tw="relative">
       <input
-        ref={inputRef}
         tw="h-12 w-full my-2 px-10"
         type="search"
         placeholder="Search for any job, title, keywords or company"
