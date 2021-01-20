@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "twin.macro";
+import useDeepCompareEffect from "use-deep-compare-effect";
 import { Job } from "../types";
 import type { Ordering } from "./filter-context";
 import { useFilter } from "./filter-context";
@@ -16,7 +17,7 @@ const Hospitals = () => {
   const { state, dispatch } = useFilter();
   const [jobs, setJobs] = useState<Job[]>([]);
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
 
