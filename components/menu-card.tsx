@@ -19,7 +19,7 @@ const MenuCard = ({ title, items = [], id, limit = 10 }: PropTypes) => {
   const menuItems = items.map((item) => (
     <li
       onClick={() => dispatch({ type: "selectFilter", payload: { category: id, type: item.key } })}
-      tw="space-x-4 flex items-center"
+      tw="space-x-4 flex items-center cursor-pointer"
       key={item.key}
       css={[state.filters[id].includes(item.key) && tw`text-blue-500`]}
     >
