@@ -5,7 +5,7 @@ type PropTypes = {};
 const Footer = (props: PropTypes) => {
   return (
     <div tw="flex flex-wrap overflow-hidden bg-white px-10 py-4 my-5">
-      <div tw="w-1/2 overflow-hidden">
+      <div tw="w-full lg:w-1/2 overflow-hidden">
         <p tw="font-bold text-xl py-2">About Us</p>
         <p>
           We are a team of nurses, doctors, technologists and executives dedicated to help nurses
@@ -13,7 +13,7 @@ const Footer = (props: PropTypes) => {
         </p>
       </div>
 
-      <div tw="w-1/4 overflow-hidden">
+      <div tw="w-full lg:w-1/4 overflow-hidden">
         <p tw="font-bold text-xl py-2">Sitemap</p>
         <ul>
           <li>Nurses</li>
@@ -23,7 +23,7 @@ const Footer = (props: PropTypes) => {
         </ul>
       </div>
 
-      <div tw="w-1/4 overflow-hidden">
+      <div tw="w-full lg:w-1/4 overflow-hidden">
         <p tw="font-bold text-xl py-2">Privacy</p>
         <ul>
           <li>Terms of use</li>

@@ -13,8 +13,8 @@ const Layout = ({}: PropTypes) => {
         <div tw="my-4">
           <Searchbar />
         </div>
-        <div tw="grid grid-cols-6 gap-4">
-          <div tw="max-w-max">
+        <div tw="grid grid-cols-1 lg:grid-cols-6 gap-4 ">
+          <div tw="max-w-max hidden lg:block">
             <Filters />
           </div>
           <div tw="col-span-5">

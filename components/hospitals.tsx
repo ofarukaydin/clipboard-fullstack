@@ -57,7 +57,7 @@ const Hospitals = () => {
           <span tw="font-semibold">{totalJobs} </span>
           job postings
         </p>
-        <ul tw="flex space-x-4">
+        <ul tw=" space-x-4 hidden lg:flex">
           <p tw="text-gray-400">Sort by</p>
           <li
             tw="flex items-center space-x-2"
