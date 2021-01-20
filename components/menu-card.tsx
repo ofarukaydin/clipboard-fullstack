@@ -9,7 +9,7 @@ type PropTypes = {
   title: string;
   items: Filter[];
   id: Category;
-  limit: number;
+  limit?: number;
 };
 
 const MenuCard = ({ title, items = [], id, limit = 10 }: PropTypes) => {
